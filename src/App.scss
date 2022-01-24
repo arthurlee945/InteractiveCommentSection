@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Rubik&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+*{
+  margin:0px;
+  padding:0px;
+}
+
+body{
+  display:flex;
+  font-family: "Rubik", "Open Sans", sans-serif;
+  font-size: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgb(239, 234, 240);
+  color:#080808;
+  user-select: none;
+  margin:0px;
+  padding:0px;
+}
+#signature{
+  margin-top:25px;
+  font-size:0.7rem;
+  #myLink{
+    color:#080808;
+    text-decoration: none;
+    font-size:0.8rem;
+    &:hover{
+      color: #cd00f7
+    }
+  }
+}
+
+.deleteContainer{
+  z-index:1;
+  position:absolute;
+  margin:0px;
+  background:#08080862;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  width:100vw;
+  height:100vh;
+  right:0px;
+  top:0px;
+  .deleteBox{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 25px;
+    color: #080808;
+    width: 500px;
+    height: 250px;
+    background: #f7f7f7;
+    .question{
+      margin: 25px;
+      font-size: 1.5rem;
+    }
+    .deleteHeader{
+      font-size: 2rem;
+      margin-top: 25px;
+    }
+    .deleteButtons{
+      display:flex;
+      justify-content: space-evenly;
+      width: 100%;
+      margin: 10px;
+      .no{
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        background:rgb(93, 108, 243);
+        color:#f7f7f7;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        width: 125px;
+        height:50px;
+        &:hover{
+          opacity: 0.8;
+          cursor: pointer;
+        }
+      }
+      .yes{
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        background:rgb(243, 93, 93);
+        color:#f7f7f7;
+        border-radius: 10px;
+        font-size: 1.5rem;
+        width: 125px;
+        height:50px;
+        &:hover{
+          opacity: 0.8;
+          cursor: pointer;
+        }
+      }
+    }
+
+  }
+}
+
+#mainSection{
+  margin-top: 50px;
+}
+
+#thread{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  #replyStyle{
+    width:625px;
+  }
+  #textStyle{
+    width: 520px;
+  }
+  .commentBox{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 25px;
+    background: #f7f7f7;
+    width: 725px;
+    
+    #karma{
+      margin: 25px;
+      margin-right: 15px;
+      border-radius: 25px;
+      color: rgb(41, 141, 255);
+      background:rgb(239, 234, 240);
+      display:flex;
+      font-size: 1.2rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 100px;
+      font-weight:bold;
+      #up,
+      #down{
+        margin: 5px;
+        color: rgb(145, 188, 236);;
+        &:hover{
+          color:rgb(32, 118, 218);
+          cursor:pointer;
+        }
+      }
+    }
+    #mainComment{
+      overflow-wrap:break-word;
+      text-align: left;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-around;
+      #info{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top:5px;
+        .userInfo{
+          display:flex;
+          flex-direction: row;
+          align-items: center;
+          #userimg{
+            margin-right: 15px;
+            border-radius: 50%;
+            width:2.5rem;
+          }
+          .username{
+            text-decoration: none;
+            color:#080808;
+            padding-right: 15px;
+            font-weight:bold;
+          }
+          .tag{
+            position:relative;
+            border-radius: 3px;
+            text-align:center;
+            width: 35px;
+            margin:0px;
+            background:rgb(41, 141, 255);
+            color:#f7f7f7;
+            left: -10px;
+          }
+          #createdAt{
+            opacity:0.8;
+          }
+        }
+        .currentUserEdit{
+          font-size: 1.1rem;
+          #trash{
+            color:rgb(224, 0, 0);
+            &:hover{
+              color:rgba(224, 0, 0, 0.507);
+              cursor:pointer;
+            }
+          }
+          #edit{
+            margin-left: 10px;
+            color:rgb(32, 118, 218);
+            &:hover{
+              color:rgb(145, 188, 236);
+              cursor:pointer;
+            }
+          }
+        }
+        #reply{
+          font-size: 1.1rem;
+          color:rgb(32, 118, 218);
+          &:hover{
+            color:rgb(145, 188, 236);
+            cursor:pointer;
+          }
+        }
+      }
+      .comment{
+        min-height:100px;
+        display:flex;
+        align-items: flex-start;
+        .text{
+          padding-top: 10px;
+          padding-left: 5px;
+          width:620px;
+          line-height: 1.5;
+          overflow-wrap: break-word;
+          .userStyle{
+            text-decoration: none;
+            color:#080808;
+            font-weight:bold;
+          }
+        }
+      }
+    }
+  }
+  .replyBox{
+    width:725px;
+    display:flex;;
+    justify-content: flex-end;
+    .replyBorder{
+      margin-top: 5px;
+      margin-bottom:5px;
+      background: #a3a3a3;
+      margin-right: 35px;
+      width:2px;
+    }
+  }
+}
+
+.editComment{
+  min-height:200px;
+  display:flex;
+  flex-direction: column;
+  align-items: flex-end;
+  .editBox{
+    width:515px;
+    height:115px;
+    margin-top:15px;
+    padding-left:5px;
+    line-height: 1.5;
+    font-size: 1rem;
+    resize:none;
+    border-radius: 15px;
+    &::-webkit-scrollbar{
+      width:10px;
+    }
+    &::-webkit-scrollbar-thumb{
+      background: rgb(81, 162, 255);
+      border-radius: 5px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: rgb(137, 192, 255);
+      cursor:pointer;
+    }
+  }
+  .updateBtn{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    border-radius:15px;
+    color: #f7f7f7;
+    font-size:1.2rem;
+    margin-top:10px;
+    width: 100px;
+    height:50px;
+    background: rgb(32, 118, 218);
+    &:hover{
+      background:rgb(145, 188, 236);
+      cursor: pointer;
+    }
+  }
+}
+
+#replyLength{
+  width:625px;
+}
+.actualReplyBox{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 25px;
+  background: #f7f7f7;
+  width: 725px;
+  height:155px;
+
+  #replyImg{
+    margin-left:5px;
+    margin-right:5px;
+    width: 50px;
+  }
+  #reply{
+    overflow-wrap:break-word;
+    font-size: 1rem;
+    line-height: 1.2;
+    resize:none;
+    padding:5px;
+    width: 525px;
+    height: 100px;
+    border-radius: 15px;
+  }
+  #replyBtn{
+    font-size: 1.3rem;
+    height: 50px;
+    width: 75px;
+    margin-left:10px;
+    margin-right:10px;
+    border-radius: 10px;
+    background:rgb(93, 108, 243);
+    border:none;
+    box-shadow: 0px 0px 2px #080808;
+    cursor: pointer;
+    &:hover{
+      opacity:0.7;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 600px) and (-webkit-min-device-pixel-ratio: 3) {
+  #mainSection{
+    margin-top: 0px;
+  }
+  
+  #thread{
+    #replyStyle{
+      width:375px;
+    }
+    #textStyle{
+      width: 325px;
+    }
+    .commentBox{
+
+      margin-bottom: 10px;
+      width: 375px;
+      
+      #karma{
+        margin: 10px;
+        margin-right: 10px;
+        font-size: 1rem;
+        width: 30px;
+        height: 75px;
+      }
+      #mainComment{
+        #info{
+          margin-top:5px;
+          margin-right:10px;
+          justify-content: space-between;
+          .userInfo{
+            font-size: 0.9rem;
+            #userimg{
+              margin-right: 10px;
+              width:2rem;
+            }
+            .username{
+              padding-right: 5px;
+            }
+            .tag{
+              border-radius: 3px;
+              width: 25px;
+              left: 0px;
+            }
+            #createdAt{
+              opacity:0.8;
+              margin-left: 5px;
+              width: 85px;
+
+            }
+          }
+          .currentUserEdit{
+            font-size: 0.9rem;
+            display:flex;
+            flex-direction:column;
+            #trash{
+              margin-top: 7px;
+              margin-bottom: 5px;
+            }
+            #edit{
+              margin-left: 0px;
+            }
+          }
+          #reply{
+            font-size: 0.9rem;
+          }
+        }
+        .comment{
+          .text{
+            width: 320px;
+          }
+        }
+      }
+    }
+    .replyBox{
+      width:375px;
+      .replyBorder{
+        display:none;
+      }
+    }
+  }
+  
+  .editComment{
+    min-height:200px;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    .editBox{
+      width:325px;
+      height:115px;
+    }
+    .updateBtn{
+      border-radius:7.5px;
+      font-size:0.9rem;
+      margin-right: 10px;
+      width: 70px;
+      height:35px;
+    }
+  }
+  
+  #replyLength{
+    width:375px;
+  }
+  .actualReplyBox{
+    border-radius: 25px;
+    background: #f7f7f7;
+    width: 375px;
+    height:155px;
+  
+    #replyImg{
+      margin-left:5px;
+      margin-right:5px;
+      width:35px;
+    }
+    #reply{
+      padding:5px;
+      width: 325px;
+    }
+    #replyBtn{
+      font-size: 0.9rem;
+      height: 30px;
+      width: 50px;
+      margin-left:5px;
+      margin-right:5px;
+    }
+  }
+}
