@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/InteractiveCommentSection/static/css/main.a6783a09.css",
+    "main.js": "/InteractiveCommentSection/static/js/main.26336e30.js",
+    "static/media/image-amyrobson.webp": "/InteractiveCommentSection/static/media/image-amyrobson.974bbf3c9ffb709f30a0.webp",
+    "static/media/image-juliusomo.webp": "/InteractiveCommentSection/static/media/image-juliusomo.595ca29b9049f4c6ce66.webp",
+    "static/media/image-maxblagun.webp": "/InteractiveCommentSection/static/media/image-maxblagun.e423f15841d76f3a5361.webp",
+    "static/media/image-ramsesmiron.webp": "/InteractiveCommentSection/static/media/image-ramsesmiron.62a67681169b8dcdc378.webp",
+    "index.html": "/InteractiveCommentSection/index.html",
+    "main.a6783a09.css.map": "/InteractiveCommentSection/static/css/main.a6783a09.css.map",
+    "main.26336e30.js.map": "/InteractiveCommentSection/static/js/main.26336e30.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a6783a09.css",
+    "static/js/main.26336e30.js"
+  ]
+}
